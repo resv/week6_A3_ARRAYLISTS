@@ -11,9 +11,11 @@ public class assignment3_1to12 {
 
 		// 1.STARTING SMALL
 
-		// INITIALIZING THE ARRAYLIST
+		// INITIALIZING THE ARRAYLIST & REGULAR ARAY
 		ArrayList<String> colors = new ArrayList<String>();
 		ArrayList<String> colors2 = new ArrayList<String>();
+		ArrayList<String> colors2Copy = new ArrayList<String>();
+		String[] regArr = {"These","elements","came","from","a","regular","array"};
 
 		// ADDING ELEMENTS (COLORS)
 		colors.addAll(Arrays.asList("Red", "Green", "Orange", "White", "Black"));
@@ -32,11 +34,11 @@ public class assignment3_1to12 {
 		searching(colors, "Red");
 		sorting(colors);
 		reversing(colors);
-		copying(colors);
+		copying(colors2,colors2Copy);
 		comparing(colors);
 		appending(colors, colors2);
 		looping(colors);
-		converting(colors);
+		converting(regArr);
 
 	}
 
@@ -102,6 +104,8 @@ public class assignment3_1to12 {
 	// ANOTHER.
 	private static void copying(ArrayList<String> list) {
 		System.out.println("\nQUESTION 8 -----------------------");
+		
+		
 
 	}
 
@@ -133,8 +137,10 @@ public class assignment3_1to12 {
 
 	// 12.CONVERTING : WRITE A METHOD THAT WILL CONVERT A REGULAR ARRAY TO AN
 	// ARRAYLIST.
-	private static void converting(ArrayList<String> list) {
+	private static void converting(String[] regularArray) {
 		System.out.println("\nQUESTION 12 -----------------------");
-
+		ArrayList<String> newArrList = new ArrayList<String>(Arrays.asList(regularArray));
+		System.out.println(newArrList);
+		System.out.println("(Converted a regular Array to an ArrayList)");		
 	}
 }
