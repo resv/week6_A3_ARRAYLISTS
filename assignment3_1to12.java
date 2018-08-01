@@ -13,10 +13,13 @@ public class assignment3_1to12 {
 
 		// INITIALIZING THE ARRAYLIST
 		ArrayList<String> colors = new ArrayList<String>();
+		ArrayList<String> colors2 = new ArrayList<String>();
 
 		// ADDING ELEMENTS (COLORS)
 		colors.addAll(Arrays.asList("Red", "Green", "Orange", "White", "Black"));
-
+		colors2.addAll(Arrays.asList("Yellow", "Blue", "Pink"));
+		
+		
 		// PRINTING ARRAYLIST
 		System.out.println("\nQUESTION 1 -----------------------");
 		System.out.println(colors);
@@ -31,7 +34,7 @@ public class assignment3_1to12 {
 		reversing(colors);
 		copying(colors);
 		comparing(colors);
-		appending(colors);
+		appending(colors, colors2);
 		looping(colors);
 		converting(colors);
 
@@ -111,16 +114,21 @@ public class assignment3_1to12 {
 
 	// 10.APPENDING : WRITE A METHOD THAT WILL APPEND THE CONTENTS OF ONE ARRAYLIST
 	// TO ANOTHER.
-	private static void appending(ArrayList<String> list) {
+	private static void appending(ArrayList<String> list, ArrayList<String> list2) {
 		System.out.println("\nQUESTION 10 -----------------------");
-
+		list.addAll(list2);
+		System.out.println(list);
+		System.out.println("(Appended both arrays)");
 	}
 
 	// 11.LOOPING : WRITE A METHOD THAT WILL PRINT OUT EACH ELEMENT OF YOUR
 	// ARRAYLIST USING A FOR-EACH LOOP.
 	private static void looping(ArrayList<String> list) {
 		System.out.println("\nQUESTION 11 -----------------------");
-
+		for (String element : list) {
+			System.out.println(element);
+		}
+		System.out.println("(Printed out all the elements in the ArrayList)");
 	}
 
 	// 12.CONVERTING : WRITE A METHOD THAT WILL CONVERT A REGULAR ARRAY TO AN
