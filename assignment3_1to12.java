@@ -14,13 +14,13 @@ public class assignment3_1to12 {
 		// INITIALIZING THE ARRAYLIST & REGULAR ARAY
 		ArrayList<String> colors = new ArrayList<String>();
 		ArrayList<String> colors2 = new ArrayList<String>();
-		ArrayList<String> colors2Copy = new ArrayList<String>();
+		ArrayList<String> blankArr = new ArrayList<String>();
 		String[] regArr = {"These","elements","came","from","a","regular","array"};
 
 		// ADDING ELEMENTS (COLORS)
 		colors.addAll(Arrays.asList("Red", "Green", "Orange", "White", "Black"));
 		colors2.addAll(Arrays.asList("Yellow", "Blue", "Pink"));
-		
+//		blankArr.addAll(Arrays.asList("Yellow", "Blue", "Pink"))
 		
 		// PRINTING ARRAYLIST
 		System.out.println("\nQUESTION 1 -----------------------");
@@ -53,8 +53,7 @@ public class assignment3_1to12 {
 		System.out.println("(Printed all elements as a sentence)");
 	}
 
-	// 3.UPDATING : WRITE A METHOD TO CHANGE THE FIFTH ELEMENT OF YOUR ARRAYLIST TO
-	// "Magenta"
+	// 3.UPDATING : WRITE A METHOD TO CHANGE THE 5TH ELEMENT OF ARRAYLIST TO "Magenta"
 	private static void updating(ArrayList<String> list) {
 		System.out.println("\nQUESTION 3 -----------------------");
 		list.set(4, "Magenta");
@@ -102,9 +101,9 @@ public class assignment3_1to12 {
 
 	// 8.COPYING : WRITE A METHOD THAT WILL COPY THE CONTENTS OF ONE ARRAYLIST TO
 	// ANOTHER.
-	private static void copying(ArrayList<String> list) {
+	private static void copying(ArrayList<String> list, ArrayList<String> blankList) {
 		System.out.println("\nQUESTION 8 -----------------------");
-		
+		list.
 		
 
 	}
