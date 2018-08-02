@@ -4,6 +4,7 @@ package week6_A3_ARRAYLISTS;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class assignment3_1to12 {
 
@@ -79,6 +80,8 @@ public class assignment3_1to12 {
 	// 5.SEARCHING : WRITE A METHOD TO SEARCH YOUR ARRAYLIST FOR A SPECIFIED COLOR.
 	private static void searching(ArrayList<String> list, String colorToFind) {
 		System.out.println("\nQUESTION 5 -----------------------");
+
+		// USING BOOLEAN AS A FLAG TO PRINT OUT FOUND NOTICIATION
 		Boolean exists = false;
 		System.out.println("Current list contains : " + list);
 		for (String colors : list) {
@@ -98,6 +101,16 @@ public class assignment3_1to12 {
 	private static void sorting(ArrayList<String> list) {
 		System.out.println("\nQUESTION 6 -----------------------");
 
+		// USING COLLECTIONS FOR EFFICIENCY
+		System.out.println("Current Order of ArrayList : " + list);
+		Collections.sort(list);
+		System.out.println("A-Z order of ArrayList : " + list);
+		System.out.println("(Sorted list in A-Z order)");
+
+		// IMPLEMENTED TO RESET ARRAY FOR NEXT METHOD TO TEST
+		list.clear();
+		list.addAll(Arrays.asList("Red", "Green", "Orange", "White", "Black"));
+
 	}
 
 	// 7.REVERSING : WRITE A METHOD TO REVERSE YOUR ARRAYLIST
@@ -115,6 +128,7 @@ public class assignment3_1to12 {
 		// RESETTING ARRAY TO ORIGINAL ORDER FOR RETESTING PURPOSES
 		list.clear();
 		list.addAll(Arrays.asList("Red", "Green", "Orange", "White", "Black"));
+		System.out.println("(Printed out array in reverse order)");
 
 		// "Collections.reverse(list)" WOULD DO ALL OF THIS IN ONE LINE!
 		// BUT I WANTED TO TRY TO USE RECURSION
@@ -159,25 +173,26 @@ public class assignment3_1to12 {
 		System.out.println("(Printing out all matching elements in two ArrayLists)");
 	}
 
-	// 10.APPENDING : WRITE A METHOD THAT WILL APPEND THE CONTENTS OF ONE ARRAYLIST
-	// TO ANOTHER.
+	// 10.APPENDING : WRITE A METHOD THAT WILL APPEND THE CONTENTS OF ONE ARRAYLIST TO ANOTHER.
 	private static void appending(ArrayList<String> list, ArrayList<String> list2) {
 		System.out.println("\nQUESTION 10 -----------------------");
+		
+		//ONE METHOD TO COMPLETE THIS REQUIREMENT
 		list.addAll(list2);
 		System.out.println(list);
 		System.out.println("(Appended both ArrayList)");
+		
 		// IMPLEMENTED TO RESET list2(colors2) ARRAY TO RESET TEST
 		list2.clear();
 		list2.addAll(Arrays.asList("Yellow", "Blue", "Pink"));
 	}
 
-	// 11.LOOPING : WRITE A METHOD THAT WILL PRINT OUT EACH ELEMENT OF YOUR
-	// ARRAYLIST USING A FOR-EACH LOOP.
+	// 11.LOOPING : WRITE A METHOD THAT WILL PRINT OUT EACH ELEMENT OF YOUR ARRAYLIST USING A FOR-EACH LOOP.
 	private static void looping(ArrayList<String> list) {
 		System.out.println("\nQUESTION 11 -----------------------");
 
-		//FOR LOOP IS USED FOR ADDING COMMAS, BUT THERE IS 
-		//A CORRECT NESTED FOR EACH LOOP TO SATISFY REQUIREMENT
+		// FOR LOOP IS USED FOR ADDING COMMAS, BUT THERE IS
+		// A CORRECT NESTED FOR EACH LOOP TO SATISFY REQUIREMENT
 		int counter = 1;
 		for (String element : list) {
 			String comma = ". ";
