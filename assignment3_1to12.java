@@ -15,13 +15,12 @@ public class assignment3_1to12 {
 		ArrayList<String> colors = new ArrayList<String>();
 		ArrayList<String> colors2 = new ArrayList<String>();
 		ArrayList<String> blankArr = new ArrayList<String>();
-		String[] regArr = {"These","elements","came","from","a","regular","array"};
+		String[] regArr = { "These", "elements", "came", "from", "a", "regular", "array" };
 
 		// ADDING ELEMENTS (COLORS)
 		colors.addAll(Arrays.asList("Red", "Green", "Orange", "White", "Black"));
 		colors2.addAll(Arrays.asList("Yellow", "Blue", "Pink"));
-//		blankArr.addAll(Arrays.asList("Yellow", "Blue", "Pink"))
-		
+
 		// PRINTING ARRAYLIST
 		System.out.println("\nQUESTION 1 -----------------------");
 		System.out.println(colors);
@@ -34,7 +33,7 @@ public class assignment3_1to12 {
 		searching(colors, "Red");
 		sorting(colors);
 		reversing(colors);
-		copying(colors2,colors2Copy);
+		copying(colors, blankArr);
 		comparing(colors);
 		appending(colors, colors2);
 		looping(colors);
@@ -59,6 +58,10 @@ public class assignment3_1to12 {
 		list.set(4, "Magenta");
 		System.out.println(list);
 		System.out.println("(5th element was changed to \"Magenta\")");
+		// IMPLEMENTED TO RESET ARRAY FOR NEXT METHOD TO TEST
+		list.clear(); 
+		list.addAll(Arrays.asList("Red", "Green", "Orange", "White", "Black"));
+		
 	}
 
 	// 4.REMOVING : WRITE A METHOD TO REMOVE THE THIRD ELEMENT OF YOUR ARRAYLIST
@@ -67,7 +70,9 @@ public class assignment3_1to12 {
 		list.remove(2);
 		System.out.println(list);
 		System.out.println("(3rd element \"Orange\" was removed)");
-
+		// IMPLEMENTED TO RESET ARRAY FOR NEXT METHOD TO TEST
+		list.clear(); 
+		list.addAll(Arrays.asList("Red", "Green", "Orange", "White", "Black"));
 	}
 
 	// 5.SEARCHING : WRITE A METHOD TO SEARCH YOUR ARRAYLIST FOR A SPECIFIED COLOR.
@@ -103,9 +108,15 @@ public class assignment3_1to12 {
 	// ANOTHER.
 	private static void copying(ArrayList<String> list, ArrayList<String> blankList) {
 		System.out.println("\nQUESTION 8 -----------------------");
-		list.
+		for (String elements2copy : list) {
+			blankList.add(elements2copy);
+		}
+		System.out.println(blankList);
+		System.out.println("(Copied elements from an ArrayList into a blank ArrayList)");
+		System.out.println("(Be advised addAll() will point to and not assign values, there for avoided use");
+		// IMPLEMENTED TO RESET blankList ARRAY TO RESET TEST
+		blankList.clear();
 		
-
 	}
 
 	// 9.COMPARING : WRITE A METHOD THAT WILL COMPARE TWO ARRAYLISTS, PRINTING OUT
@@ -122,6 +133,9 @@ public class assignment3_1to12 {
 		list.addAll(list2);
 		System.out.println(list);
 		System.out.println("(Appended both arrays)");
+		// IMPLEMENTED TO RESET list2(colors2) ARRAY TO RESET TEST
+		list2.clear();
+		list2.addAll(Arrays.asList("Yellow", "Blue", "Pink"));
 	}
 
 	// 11.LOOPING : WRITE A METHOD THAT WILL PRINT OUT EACH ELEMENT OF YOUR
@@ -140,6 +154,8 @@ public class assignment3_1to12 {
 		System.out.println("\nQUESTION 12 -----------------------");
 		ArrayList<String> newArrList = new ArrayList<String>(Arrays.asList(regularArray));
 		System.out.println(newArrList);
-		System.out.println("(Converted a regular Array to an ArrayList)");		
+		System.out.println("(Converted a regular Array to an ArrayList)");
+		// IMPLEMENTED TO RESET newArrList ARRAY TO RESET TEST
+		newArrList.clear();
 	}
 }
