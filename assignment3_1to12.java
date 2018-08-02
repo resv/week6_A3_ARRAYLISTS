@@ -26,7 +26,7 @@ public class assignment3_1to12 {
 		System.out.println(colors);
 		System.out.println("(Printed all elements in the ArrayList)");
 
-		// CALLING METHODS
+		// CALLING ALL METHODS, ONE AFTER ANOTHER
 		iterating(colors);
 		updating(colors);
 		removing(colors);
@@ -101,7 +101,15 @@ public class assignment3_1to12 {
 	// 7.REVERSING : WRITE A METHOD TO REVERSE YOUR ARRAYLIST
 	private static void reversing(ArrayList<String> list) {
 		System.out.println("\nQUESTION 7 -----------------------");
-
+		//PUSHING THE LAST INDEX, POPPING THE LAST INDEX OF ARRAY.SIZE()
+		System.out.println("Current ArrayList order : " + list);
+		for (int i = 0, k = list.size() - 1 ; i < k; i++) {
+			list.add(i, list.remove(k));
+		}
+		System.out.println("New reversed order..." + list);
+		//RESETTING ARRAY TO ORIGINAL ORDER FOR RETESTING PURPOSES
+		list.clear();
+		list.addAll(Arrays.asList("Red", "Green", "Orange", "White", "Black"));
 	}
 
 	// 8.COPYING : WRITE A METHOD THAT WILL COPY THE CONTENTS OF ONE ARRAYLIST TO
