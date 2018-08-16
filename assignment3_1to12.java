@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class assignment3_1to12 {
+public class Assignment3_1to12 {
 
 	public static void main(String[] args) {
 
